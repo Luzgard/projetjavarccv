@@ -10,7 +10,7 @@ import view.View;
  * @author Jean-Aymeric Diet
  */
 public abstract class Main {
-//test commiti
+//test commit3
 	/**
 	 * The main method.
 	 *
