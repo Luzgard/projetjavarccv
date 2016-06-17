@@ -11,5 +11,24 @@ import contract.IView;
 
 public class View implements IView, Runnable {
 
+	private final ViewFrame viewFrame;
+	public View(final IModel model) {
+		
+	}
 	
+	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode){
+		
+	}
+	
+	public void printMessage(final String message){
+		
+	}
+	
+	public void run() {
+		
+	}
+	
+	public void setController(final IController controlller) {
+		
+	}
 }

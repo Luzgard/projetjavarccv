@@ -9,5 +9,7 @@ import java.util.Observable;
  */
 public interface IModel {
 
-	
+	String getMessage();
+	void loadMessage(String key);
+	Observable getObservable();
 }
