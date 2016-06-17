@@ -50,8 +50,8 @@ public class Model extends Observable implements IModel {
 	 */
 	public void loadMessage(final String key) {
 		try {
-			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMessage(daoHelloWorld.find(key).getMessage());
+			final DAOElements daoElements = new DAOElements(DBConnection.getInstance().getConnection());
+			this.setMessage(daoElements.find(key).getMessage());
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
