@@ -12,14 +12,12 @@ import contract.IModel;
  */
 public class Model extends Observable implements IModel {
 
-	/** The message. */
-	private String message;
 
 	/**
 	 * Instantiates a new model.
 	 */
 	public Model() {
-		this.message = "";
+
 	}
 
 	/*
@@ -27,35 +25,7 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
-	public String getMessage() {
-		return this.message;
-	}
 
-	/**
-	 * Sets the message.
-	 *
-	 * @param message
-	 *          the new message
-	 */
-	private void setMessage(final String message) {
-		this.message = message;
-		this.setChanged();
-		this.notifyObservers();
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getMessage(java.lang.String)
-	 */
-	public void loadMessage(final String key) {
-		try {
-			final DAOElements daoElements = new DAOElements(DBConnection.getInstance().getConnection());
-			this.setMessage(daoElements.find(key).getMessage());
-		} catch (final SQLException e) {
-			e.printStackTrace();
-		}
-	}
 
 	/*
 	 * (non-Javadoc)
@@ -64,5 +34,15 @@ public class Model extends Observable implements IModel {
 	 */
 	public Observable getObservable() {
 		return this;
+	}
+
+	public String getMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void loadMessage(String key) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -10,33 +10,33 @@ class Elements extends Entity {
 	/** The id. */
 	private int			id;
 
-	/** The key. */
-	private String	key;
+	/** The position X. */
+	private int	x_positions;
 
-	/** The message. */
-	private String	message;
+	/** The position Y. */
+	private int	y_positions;
 
 	/**
-	 * Instantiates a new hello world.
+	 * Instantiates a new element.
 	 *
 	 * @param id
 	 *          the id
-	 * @param key
-	 *          the key
-	 * @param message
-	 *          the message
+	 * @param x_positions
+	 *          the x_positions
+	 * @param y_positions
+	 *          the y_positions
 	 */
-	public Elements(final int id, final String key, final String message) {
+	public Elements(final int id, final int x_positions, final int y_positions) {
 		this.setId(id);
-		this.setKey(key);
-		this.setMessage(message);
+		this.setPosX(x_positions);
+		this.setPosY(y_positions);
 	}
 
 	/**
-	 * Instantiates a new hello world.
+	 * Instantiates a new element.
 	 */
 	public Elements() {
-		this(0, "", "");
+		this(0, 0, 0);
 	}
 
 	/**
@@ -63,8 +63,8 @@ class Elements extends Entity {
 	 *
 	 * @return the key
 	 */
-	public String getKey() {
-		return this.key;
+	public int getPosX() {
+		return this.x_positions;
 	}
 
 	/**
@@ -73,8 +73,8 @@ class Elements extends Entity {
 	 * @param key
 	 *          the new key
 	 */
-	public void setKey(final String key) {
-		this.key = key;
+	public void setPosX(final int x_positions) {
+		this.x_positions = x_positions;
 	}
 
 	/**
@@ -82,8 +82,8 @@ class Elements extends Entity {
 	 *
 	 * @return the message
 	 */
-	public String getMessage() {
-		return this.message;
+	public int getPosY() {
+		return this.y_positions;
 	}
 
 	/**
@@ -92,8 +92,8 @@ class Elements extends Entity {
 	 * @param message
 	 *          the new message
 	 */
-	public void setMessage(final String message) {
-		this.message = message;
+	public void setPosY(final int y_positions) {
+		this.y_positions = y_positions;
 	}
 
 }

@@ -67,13 +67,13 @@ class DAOElements extends DAOEntity<Elements> {
 		Elements element = new Elements();
 
 		try {
-			final String sql = "{call helloworldById(?)}";
+			final String sql = "{call ElementsLevel1(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
 			call.setInt(1, id);
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				element = new Elements(id, resultSet.getString("key"), resultSet.getString("message"));
+				element = new Elements(id, resultSet.getInt("x_positions"), resultSet.getInt("y_positions"));
 			}
 			return element;
 		} catch (final SQLException e) {
@@ -82,29 +82,9 @@ class DAOElements extends DAOEntity<Elements> {
 		return null;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see model.DAOEntity#find(java.lang.String)
-	 */
 	@Override
-	public Elements find(final String key) {
-		Elements element = new Elements();
-
-		try {
-			final String sql = "{call helloworldByKey(?)}";
-			final CallableStatement call = this.getConnection().prepareCall(sql);
-			call.setString(1, key);
-			call.execute();
-			final ResultSet resultSet = call.getResultSet();
-			if (resultSet.first()) {
-				element = new Elements(resultSet.getInt("id"), key, resultSet.getString("message"));
-			}
-			return element;
-		} catch (final SQLException e) {
-			e.printStackTrace();
-		}
+	public Elements find(String key) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-
 }
