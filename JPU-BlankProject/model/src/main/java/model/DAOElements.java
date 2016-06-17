@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 class DAOElements extends DAOEntity<Elements> {
-	
+	//commit
 	public DAOElements(final Connection connection) throws SQLException {
 		super(connection);
 	}
