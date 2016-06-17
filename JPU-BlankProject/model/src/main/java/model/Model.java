@@ -12,37 +12,5 @@ import contract.IModel;
  */
 public class Model extends Observable implements IModel {
 
-
-	/**
-	 * Instantiates a new model.
-	 */
-	public Model() {
-
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getMessage()
-	 */
-
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getObservable()
-	 */
-	public Observable getObservable() {
-		return this;
-	}
-
-	public String getMessage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void loadMessage(String key) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

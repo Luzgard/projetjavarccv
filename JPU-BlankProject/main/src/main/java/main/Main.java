@@ -10,18 +10,6 @@ import view.View;
  * @author Jean-Aymeric Diet
  */
 public abstract class Main {
-//test commit3
-	/**
-	 * The main method.
-	 *
-	 * @param args
-	 *          the arguments
-	 */
-	public static void main(final String[] args) {
-		final Model model = new Model();
-		final View view = new View(model);
-		final Controller controller = new Controller(view, model);
-		view.setController(controller);
-		controller.control();
-	}
+
+	
 }
