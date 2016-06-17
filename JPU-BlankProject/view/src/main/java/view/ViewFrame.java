@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.GraphicsConfiguration;
 
 import java.awt.HeadlessException;
@@ -59,7 +60,12 @@ class ViewFrame extends JFrame implements KeyListener {
 	private void buildViewFrame(final IModel model) {
 		this.setModel(model);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+<<<<<<< HEAD
 		this.setResizable(true);
+=======
+		this.setBackground(Color.BLACK);
+		this.setResizable(false);
+>>>>>>> ed4179da66e0d7ffcab83729c41fd03307084992
 		this.addKeyListener(this);
 		this.setContentPane(new ViewPanel(this));
 		this.setSize(400 + this.getInsets().left + this.getInsets().right, 60 + this.getInsets().top + this.getInsets().bottom);
